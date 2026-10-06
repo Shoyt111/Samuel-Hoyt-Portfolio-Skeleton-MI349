@@ -1,0 +1,23 @@
+:root{
+    --primary-bg: #e3e3e3;
+    --primary-text: #444;
+    --standard-gap: 40px;
+}
+
+body{
+    font-family: sans-serif;
+    background: var(--primary-bg);
+    color: var(--primary-text);
+}
+
+#projects article{
+    margin: var(--standard-gap);
+}
+
+nav{
+    background: green;
+}
+
+#menu{
+    background: white;
+}
