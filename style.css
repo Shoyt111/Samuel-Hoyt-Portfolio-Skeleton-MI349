@@ -2,6 +2,7 @@
     --primary-bg: #e3e3e3;
     --primary-text: #444;
     --standard-gap: 40px;
+    --secondary-text: black;
 }
 
 body{
@@ -16,8 +17,21 @@ body{
 
 nav{
     background: green;
+    text-align: center;
+    border-bottom: 10px solid green;
+    border-top: 7px solid green;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 1rem;
 }
 
 #menu{
     background: white;
 }
+
+a{
+     color: var(--secondary-text);
+}
+
