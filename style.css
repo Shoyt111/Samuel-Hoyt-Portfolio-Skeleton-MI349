@@ -1,10 +1,11 @@
 :root{
-    --primary-bg: black;
-    --primary-text: gold;
+    --primary-bg: #050505;
+    --primary-text: #EEE82C;
     --standard-gap: 40px;
-    --secondary-text: gold;
+    --secondary-text: #EEE82C;
     --page-margin: 6rem;
-    --highlight :black;
+    --highlight : #050505;
+    --secondary-bg: #565656;
 }
 
 body{
@@ -16,24 +17,49 @@ body{
     margin-right: 0px;
     margin-bottom: 0px;
     margin-left: 0px;
+    border-top: 20px solid var();
+}
+
+h2{
+    font-size: 3em;
+    font-weight: normal;
+    border-bottom: 1px solid var(--secondary-text);
 }
 
 #projects article{
     margin: var(--standard-gap);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    background: #565656;
+    width: 30%;
 
 }
 
 nav{
-    background: grey;
+    background: #696773;
     text-align: center;
-    border-bottom: 1px solid green;
-    border-top: 1px solid green;
+    border-bottom: 2px solid  #EEE82C;
+    border-top: 2px solid  #EEE82C;
     border-radius: 10px;
 }
 
-nav li {
+nav ul{
+    line-style-type:none;
+    margin: 1;
+}
+
+nav ul li {
     display: inline-block;
     margin-left: 1rem;
+}
+
+nav ul li a{
+    color: var(--primary-text);
+    text-decoration: none;
+    font-size: 1.8em;
+    padding: 1rem 2rem;
+    display: inline-block;
 }
 
 #menu{
@@ -53,10 +79,14 @@ header{
     padding-left: 0px;
 }
 
-header > a img{
+#logo img{
     display: block;
     width: 100%;
     object-fit: cover;
+}
+
+#logo img:hover {
+    transform: scale(100)
 }
 
 nav{
@@ -76,6 +106,17 @@ p{
 p{
     font-size: 1.2em;
     line-height: 1.6;
+}
+
+main {
+    margin: 1 var(--page-margin);
+}
+
+#hero h1 {
+    font-size: 4em;
+    text-align: center;
+    line-height: 1.1;
+    letter-spacing: -2px;
 }
 
 
