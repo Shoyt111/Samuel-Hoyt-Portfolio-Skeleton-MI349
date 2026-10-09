@@ -17,7 +17,7 @@ body{
     margin-right: 0px;
     margin-bottom: 0px;
     margin-left: 0px;
-    border-top: 20px solid var();
+    border-top: 0px solid var(--secondary-text);
 }
 
 h2{
@@ -33,11 +33,11 @@ h2{
     border-radius: 10px;
     background: #565656;
     width: 30%;
-
+    box-shadow: 0 4px 10px rgba(255,243,0,.99);
 }
 
 nav{
-    background: #696773;
+    background: #565656;
     text-align: center;
     border-bottom: 2px solid  #EEE82C;
     border-top: 2px solid  #EEE82C;
@@ -75,18 +75,19 @@ header{
     padding: 1rem;
     padding-top: 1rem;
     padding-right: 0px;
-    padding-bottom: 1rem;
+    padding-bottom: 0rem;
     padding-left: 0px;
 }
 
 #logo img{
     display: block;
-    width: 100%;
+    width: 50%;
     object-fit: cover;
+    margin-left:450px;
 }
 
 #logo img:hover {
-    transform: scale(100)
+    transform: scale(1.1)
 }
 
 nav{
@@ -120,3 +121,13 @@ main {
 }
 
 
+#portfolio img{
+    width:20%;
+    display: block;
+    object-fit: cover;
+    margin-left: 700px;
+}
+
+#JBBNS img{
+    width: 100%;
+}
