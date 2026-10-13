@@ -26,19 +26,53 @@ h2{
     border-bottom: 1px solid var(--secondary-text);
 }
 
+@media (min-width: 600px){
+    #projects {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, minmax(100px, auto));
+     gap: 1em;
+    }
+
+    #projects h2{
+        grid-column: span 2 / span 2;
+    }
+    
+}
+
+@media (min-width: 1000px){
+    #projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+#projects .articles{
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-start;
+}
+
+#projects h2{
+    grid-column: span 2 / span 2;
+}
+
 #projects article{
     margin: var(--standard-gap);
     padding: 1rem;
     margin-bottom: 1rem;
     border-radius: 10px;
     background: var(--secondary-bg);
-    width: 35%;
     box-shadow: 0 5px 10px 5px rgba(255,214,10,.9);
     border: 2px solid var(--secondary-text);
 }
 
 #projects article h3{
     font-size:2em;
+}
+
+#projects img {
+    width: 100%;
 }
 
 nav{
