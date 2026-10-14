@@ -26,6 +26,7 @@ h2{
     border-bottom: 1px solid var(--secondary-text);
 }
 
+/* Original prompt: create a flexbox in nav section where its at row form on larger screens and vertical on mobile with a min width of 600px. Use media queries to handle grid changes. */
 @media (min-width: 600px){
     #projects {
         display: grid;
@@ -84,6 +85,7 @@ nav{
     box-shadow: 0 5px 10px 5px rgba(255,214,10,.9);
 }
 
+/* Original prompt: create a flexbox in nav section where its at row form on larger screens and vertical on mobile with a min width of 600px. Use media queries to handle grid changes. */
 nav ul{
     display: flex;
     flex-direction: column;
@@ -162,7 +164,13 @@ main {
     margin: 0 var(--page-margin);
 }
 
-#hero h1 {
+#portfolio {
+    display: grid;
+    place-items: center;
+    min-height: 0vh;
+}
+
+#portfolio h1 {
     font-size: 4em;
     text-align: center;
     line-height: 1.1;
