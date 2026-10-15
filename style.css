@@ -3,7 +3,7 @@
     --primary-text: #FFD60A;
     --standard-gap: 40px;
     --secondary-text: #FFD60A;
-    --page-margin: 6rem;
+    --page-margin: 1rem;
     --highlight : #050505;
     --secondary-bg: #565656;
 }
@@ -20,13 +20,47 @@ body{
     border-top: 0px solid var(--secondary-text);
 }
 
+
+@media(min-width:600px){
+    :root{
+        --page-margin: 2rem;
+    }    
+}
+
+@media (min-width: 800px){
+    :root{
+        --page-margin: 4rem;
+    }    
+}
+
+
+@media (min-width:900px){
+    main{
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 1200px){
+    header,
+    main {
+        width:100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 var(--page-margin);        :root {
+            --page-margin: 1rem;
+        }
+    }
+}
+
+
+
 h2{
     font-size: 3em;
     font-weight: normal;
     border-bottom: 1px solid var(--secondary-text);
 }
 
-/* Original prompt: create a flexbox in nav section where its at row form on larger screens and vertical on mobile with a min width of 600px. Use media queries to handle grid changes. */
 @media (min-width: 600px){
     #projects {
         display: grid;
@@ -129,7 +163,7 @@ a{
 header{
     text-align: center;
     padding: 1rem 0; 
-    margin: 0 var(--page-margin)
+    padding: 0 var(--page-margin);
 }
 
 #logo img{
@@ -161,7 +195,7 @@ p{
 }
 
 main {
-    margin: 0 var(--page-margin);
+    padding: 0 var(--page-margin);
 }
 
 #portfolio {
@@ -170,13 +204,24 @@ main {
     min-height: 0vh;
 }
 
-#portfolio h1 {
-    font-size: 4em;
+#portfolio + h1 {
+    font-size: 1.8rem;
     text-align: center;
     line-height: 1.1;
     letter-spacing: -2px;
 }
 
+@media (min-width: 600px){
+    #portfolio + h1{
+        font-size: 2.2rem;
+    }
+}
+
+@media (min-width: 900px){
+    #portfolio + h1{
+        font-size: 2.6rem;
+    }
+}
 
 #portfolio {
     display: block;
