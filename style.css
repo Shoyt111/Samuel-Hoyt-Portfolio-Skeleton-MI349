@@ -52,7 +52,7 @@ body{
 
 @media (min-width: 1200px){
     :root {
-        --page-margin: 1rem;
+        --page-margin: 2rem;
     }
 
     header,
@@ -94,7 +94,7 @@ h2{
 
 @media (min-width: 1000px){
     #projects {
-        grid-template-columns: minmax(0, 1.25fr) minmax(0,0.75fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
 }
@@ -119,8 +119,18 @@ h2{
     font-size:2em;
 }
 
+#projects article > a{
+    display:block;
+    aspect-ratio: 16/9;
+    background: var(--primary-bg);
+}
+
 #projects img {
+    display: block;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
 }
 
 nav{
@@ -214,6 +224,8 @@ main {
 
 #portfolio {
     display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
     place-items: center;
     text-align: center;
 }
@@ -232,18 +244,36 @@ main {
 }
 
 @media (min-width: 900px){
+    #portfolio{
+        grid-template-columns:minmax(0, 0.9fr) minmax(0, 1.1fr);
+        align-items: center;
+        justify-items: stretch;
+        gap: 3rem;
+    }
+
     #portfolio h1{
-        font-size: 2.6rem;
+        font-size: 2.5rem;
+        text-align: left;
     }
 }
 
-#portfolio {
-    display: block;
-    text-align: center;
+
+#portfolio > a{
+    display:block;
+    width: min(100%, 22rem);
 }
 
+@media (min-width: 900px){
+    #portfolio > a{
+        margin-left: 1rem;
+    }
+}
+
+
 #portfolio img{
-    width:20%;
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 #JBBNS img{
@@ -260,7 +290,7 @@ main {
     grid-template-rows: auto 1fr;
     gap: 1.5rem;
     margin: 3rem 0;
-    padding: 2rem;
+    padding: 2rem 0;
     min-height: 12rem;
     background: var(--primary-bg);
     color: var(--secondary-text);
