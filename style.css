@@ -5,7 +5,7 @@
     --secondary-text: #FFD60A;
     --page-margin: 1rem;
     --highlight : #050505;
-    --secondary-bg: #565656;
+    --secondary-bg: #464646;
 }
 
 body{
@@ -132,7 +132,7 @@ h2{
 }
 
 nav{
-    background: #565656;
+    background: var(--secondary-bg);
     text-align: center;
     margin: 1rem;
     border: 2px solid var(--secondary-text);
@@ -292,7 +292,7 @@ main {
     min-height: 12rem;
     background: var(--primary-bg);
     color: var(--secondary-text);
-    border: 2px solid var(--secondary-text);
+    border: 5px solid var(--secondary-bg);
     border-radius: 16px;
 }
 
