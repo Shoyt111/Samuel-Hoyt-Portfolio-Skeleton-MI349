@@ -6,6 +6,18 @@
     --page-margin: 1rem;
     --highlight : #050505;
     --secondary-bg: #464646;
+    --accent-shadow: rgba(255, 214, 10, .65);
+    color-scheme: dark;
+}
+
+body[data-theme="light"]{
+    --primary-bg: #fdfcf8;
+    --primary-text: #31572C;
+    --secondary-text: #31572C;
+    --highlight: #fdfcf8;
+    --secondary-bg: #ede8d9;
+    --accent-shadow: rgba(0, 75, 35, .65);
+    color-scheme: light;
 }
 
 body{
@@ -18,6 +30,7 @@ body{
     margin-bottom: 0px;
     margin-left: 0px;
     border-top: 0px solid var(--secondary-text);
+    transition: background-color .25s ease, color .25s ease;
 }
 
 *{
@@ -109,7 +122,7 @@ h2{
     padding: 1rem;
     border-radius: 10px;
     background: var(--secondary-bg);
-    box-shadow: 0 5px 10px 5px rgba(255,214,10,.9);
+    box-shadow: 0 5px 10px 5px var(--accent-shadow);
     border: 2px solid var(--secondary-text);
 }
 
@@ -137,7 +150,30 @@ nav{
     margin: 1rem;
     border: 2px solid var(--secondary-text);
     border-radius: 30px;
-    box-shadow: 0 3.5px 6.5px 3.5px rgba(255,214,10,.9);
+    box-shadow: 0 3.5px 6.5px 3.5px var(--accent-shadow);
+}
+
+.theme-toggle,
+#click{
+    padding: .65rem 1rem;
+    border: 2px solid var(--secondary-text);
+    border-radius: 999px;
+    background: var(--secondary-bg);
+    color: var(--primary-text);
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.theme-toggle:hover,
+#click:hover{
+    transform: translateY(-1px);
+}
+
+.theme-toggle:focus-visible,
+#click:focus-visible{
+    outline: 3px solid var(--primary-text);
+    outline-offset: 3px;
 }
 
 /* Original prompt: create a flexbox in nav section where its at row form on larger screens and vertical on mobile with a min width of 600px. Use media queries to handle grid changes. */
@@ -175,6 +211,11 @@ nav ul li a{
 
 #menu{
     background: var(--secondary-bg);
+}
+
+body[data-theme="light"] #projects article,
+body[data-theme="light"] nav{
+    box-shadow: 0 5px 12px 3px rgba(0, 75, 35, .65);
 }
 
 a{
